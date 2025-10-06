@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para aplicar em todos os dispositivos */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+    background-color: #4d4d4d;
+    padding: 1rem;
+}
+
+header {
+    background: #7e7e7e;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background: #6b6b6b;
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+    gap: 1rem; /* Espaçamento entre os itens do menu */
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #ff50bc;
+    font-weight: bold;
+}
+
+nav ul a:hover {
+    color: #ffcfe3;
+}
+
+nav ul a:active {
+    color: #adbd24;
+}
+
+section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #7e7e7e;
+    color: #fff;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: dotted underline;
+    color: #aaf3bc;
+}
+
+a:hover {
+    text-decoration: solid underline;
+    color: #e4197f;
+}
+
+a:active {
+    text-decoration: none;
+    color: #d495ff;
+}
+
+#topo {
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('img/fundo_home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay; /* Adiciona um efeito de sobreposição */
+}
+
+#sobre {
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#servicos {
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('img/fundo_servicos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay; 
+}
+
+section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+    gap: 1rem; /* Espaçamento entre os itens do menu */
+}
+
+.menuServicos ul {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.menuServicos li {
+    padding: 1rem;
+    border-radius: 8px;
+    border-style: dotted;
+    border-color:#4d4d4d;
+    text-align: center;
+    font-weight: bold;
+}
+
+#depoimentos {
+    text-align: center;
+    height: auto;
+    padding: 2rem;
+    background-color: #5a5a5a;
+}
+
+.menuDepoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: stretch;
+}
+
+.menuDepoimentos blockquote {
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-style: italic;
+    font-weight: bold;
+    border-style: ridge;
+    border-color: #838383;
+    background-image: url('img/fundo_block_depoimentos.png');
+    background-repeat: no-repeat;
+    background-color: #435750;
+    background-blend-mode:overlay;
+}
+
+blockquote a:hover {
+    color: #000000;
+}
+
+#contato {
+    background-image: url('img/fundo_contato.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.contatoEmBlocos {
+    display: block;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.infoContato, .formularioContato {
+    margin-bottom: 2rem;
+    line-height: 2;
+}
+
+form {
+    display: grid;
+    max-width: 50%;
+    gap: 1rem;
+}
+
+input, textarea, select {
+    border-radius: 5px;
+    border-style: dotted;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+input, select, button {
+    height: 2rem;
+}
+
+textarea {
+    height: 5rem;
+}
+
+button {
+    border-radius: 5px;
+    border-style: none;
+    background-color: #54795d;
+    color: #FFF;
+}
+
+button:hover {
+    background-color: #bd7ea5;
+    color: #3f3f3f;
+}
+
+button:active {
+    background-color: #52414b;
+    color: #c0c0c0;
+}
+
+#arquivo {
+    border-style: none;
+    background-color: transparent;
+    color: #fff;
+    height: auto;
+}
+
+footer {
+    margin-top: 1.5rem;
+    background: linear-gradient(360deg, #fff, #4d4d4d);
+    text-align: center;
+    color: #152719;
+    font-weight: bold;
+}
+
+/* Estilos para telas maiores (acima de 900px - desktop) */
+@media (min-width: 901px) {
+
+    body {
+        padding: 3rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: stretch; /* Alinha os itens para preencher a altura do grid */
+    }
+
+    header.container {
+        grid-column: 1 / 2;
+    }
+
+    nav.container {
+        grid-column: 2 / 3;
+    }
+
+    nav ul {
+        gap: 4rem; /* Espaçamento maior entre os itens do menu */
+        font-size: 1.3rem;
+    }
+
+    #topo {
+            font-size: 1.5rem;
+            line-height: 5;
+    }
+
+    #sobre {
+            font-size: 1.3rem;
+            line-height: 3;
+    }
+
+    #servicos {
+        font-size: 1.3rem;
+        line-height: 4;
+    }
+
+    #depoimentos {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+
+    #contato {
+        font-size: 1.3rem;
+    }
+
+    .contatoEmBlocos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .infoContato, .formularioContato {
+        margin-bottom: 0;
+    }
+
+    form input, form select {
+        font-size: 1.3rem;
+    }
+
+    form select option {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* Estilos para telas médias (entre 601px e 900px - tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .container {
+        display: block;
+    }
+
+    nav.container {
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        gap: 2rem;
+        font-size: 1.2rem;
+    }
+
+    #topo {
+        font-size: 1.3rem;
+        line-height: 4;
+    }
+
+    #sobre, #servicos {
+        font-size: 1.3rem;
+        line-height: 3;
+    }
+
+    #depoimentos {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+
+    #contato, form input, form select, button {
+        font-size: 1.3rem;
+    }
+
+    form select option {
+        font-size: 0.2rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+
+}
+
+/* Estilos para telas pequenas (até 600px - mobile) */
+@media (max-width: 600px) {
+
+    .container {
+        display: block;
+    }
+
+    nav.container {
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+    #topo {
+        font-size: 1rem;
+        line-height: 3;
+    }
+
+    #sobre {
+        font-size: 0.8rem;
+        line-height: 3;
+    }
+
+    #servicos, #depoimentos {
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    #contato {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+}

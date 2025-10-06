@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criativa Web | Design Digital</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"><img src="img/logo.png" alt="Logo Criativa Web" /></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#topo">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="topo">
+            <h1>Bem-vindo à Criativa Web</h1>
+            <p>Soluções inovadoras em design digital, desenvolvimento web, branding e muito mais para o seu negócio. Veja <a href="#servicos">nossos serviços</a>.</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Na Criativa Web, somos apaixonados por transformar ideias em realidade digital. Com uma equipe dedicada de designers, desenvolvedores e estrategistas, oferecemos soluções personalizadas para atender às necessidades únicas de cada cliente. Veja <a href="#depoimentos">o que nossos clientes têm a dizer</a>.</a></p>
+        </section>
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <div class="menuServicos">
+                <ul>
+                    <li>Design de Sites</li>
+                    <li>Desenvolvimento Web</li>
+                    <li>Branding e Identidade Visual</li>
+                    <li>Marketing Digital</li>
+                    <li>Consultoria em UX/UI</li>
+                </ul>
+            </div>
+            <p><a href="#contato">Solicite um orçamento</a></p>
+        </section>
+        <section id="depoimentos">
+            <h2>Depoimentos</h2>
+            <div class="menuDepoimentos">
+                <blockquote>
+                    <p>"A Criativa Web transformou nossa presença online. O novo site é incrível e fácil de navegar!" - Gabriela Costa / Proprietária da <a href="#">Gabi Sweets</a></p>
+                </blockquote>
+                <blockquote>
+                    <p>"Excelente atendimento e resultados excepcionais. Recomendo a todos!" - Gustavo Rios / Proprietário da <a href="#">Rios Contabilidade</a></p>
+                </blockquote>
+                <blockquote>
+                    <p>"As vendas online aumentaram muito desde que contratamos a Criativa Web. Indicarei a todos os colegas que querem uma forte presença online!" - Aline Francisco / Proprietária da <a href="#">Lotus Boutique</a></p>
+                </blockquote>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+
+            <div class="contatoEmBlocos">
+                <div class="infoContato">
+
+                    <h3>Endereço:</h3>
+                    <p>Rua das Flores, 123 - 5º Andar, sala 533 - Galeria Primavera - Jardins, São Paulo - SP - CEP: 01234-567</p>
+                    <h3>Telefone:</h3>
+                    <p>(11) 98765-4321</p>
+                    <h3>Email:</h3>
+                    <p>comercial@criativaweb.com.br</p>
+
+                </div>
+
+                <div class="formContato">
+
+                    <h3>Formulário de Contato</h3>
+
+                    <form>
+                        <label for="nome">Nome (obrigatório):</label>
+                        <input type="text" id="nome" name="nome" required />
+                        
+                        <label for="email">Email (obrigatório):</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="fone">Telefone para contato (obrigatório):</label>
+                        <input type="tel" id="fone" name="fone" required />
+
+                        <label for="assunto">Assunto (obrigatório):</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="orcamento">Solicitar Orçamento</option>
+                            <option value="duvidas">Dúvidas sobre Serviços</option>
+                            <option value="curriculo">Envio de Currículo</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                        
+                        <label for="mensagem">Mensagem (obrigatório):</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+
+                        <label for="arquivo">Anexar arquivo (opcional):</label>
+                        <input type="file" id="arquivo" name="arquivo" />
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Criativa Web. Todos os direitos reservados.</p>
+        <p>Siga-nos:
+            <a href="#"><img src="img/social/icon-facebook.png" /></a> 
+            <a href="#"><img src="img/social/icon-insta.png" /></a> 
+            <a href="#"><img src="img/social/icon-x.png" /></a> 
+            <a href="#"><img src="img/social/Icon-tiktok.png" /></a>
+    </footer>
+</body>
+</html>
