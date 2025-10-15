@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criativa Web | Design Digital</title>
+    <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -11,97 +12,95 @@
         <header>
             <a href="index.html"><img src="img/logo.png" alt="Logo Criativa Web" /></a>
         </header>
-        <nav>
-            <ul>
-                <li><a href="#topo">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <nav class="nav">
+            <ul class="nav__menu">
+                <li><a href="#topo" class="nav__link">Home</a></li>
+                <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                <li><a href="#servicos" class="nav__link">Serviços</a></li>
+                <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                <li><a href="#contato" class="nav__link">Contato</a></li>
             </ul>
         </nav>
     </div>
     <main>
-        <section id="topo">
-            <h1>Bem-vindo à Criativa Web</h1>
+        <section id="topo" class="topo">
+            <h1 class="topo__titulo">Bem-vindo à Criativa Web</h1>
             <p>Soluções inovadoras em design digital, desenvolvimento web, branding e muito mais para o seu negócio. Veja <a href="#servicos">nossos serviços</a>.</p>
         </section>
-        <section id="sobre">
-            <h2>Sobre Nós</h2>
+        <section id="sobre" class="sobre">
+            <h2 class="sobre__titulo">Sobre Nós</h2>
             <p>Na Criativa Web, somos apaixonados por transformar ideias em realidade digital. Com uma equipe dedicada de designers, desenvolvedores e estrategistas, oferecemos soluções personalizadas para atender às necessidades únicas de cada cliente. Veja <a href="#depoimentos">o que nossos clientes têm a dizer</a>.</a></p>
         </section>
-        <section id="servicos">
-            <h2>Nossos Serviços</h2>
-            <div class="menuServicos">
-                <ul>
-                    <li>Design de Sites</li>
-                    <li>Desenvolvimento Web</li>
-                    <li>Branding e Identidade Visual</li>
-                    <li>Marketing Digital</li>
-                    <li>Consultoria em UX/UI</li>
+        <section id="servicos" class="servicos">
+            <h2 class="servicos__titulo">Nossos Serviços</h2>
+                <ul class="servicos__list">
+                    <li class="servicos__item">Design de Sites</li>
+                    <li class="servicos__item">Desenvolvimento Web</li>
+                    <li class="servicos__item">Branding e Identidade Visual</li>
+                    <li class="servicos__item">Marketing Digital</li>
+                    <li class="servicos__item">Consultoria em UX/UI</li>
                 </ul>
-            </div>
             <p><a href="#contato">Solicite um orçamento</a></p>
         </section>
-        <section id="depoimentos">
-            <h2>Depoimentos</h2>
-            <div class="menuDepoimentos">
-                <blockquote>
-                    <p>"A Criativa Web transformou nossa presença online. O novo site é incrível e fácil de navegar!" - Gabriela Costa / Proprietária da <a href="#">Gabi Sweets</a></p>
+        <section id="depoimentos" class="depoimentos">
+            <h2 class="depoimentos__titulo">Depoimentos</h2>
+            <div class="depoimentos__galeria">
+                <blockquote class="depoimentos__blockquote">
+                    <p>"A Criativa Web transformou nossa presença online. O novo site é incrível e fácil de navegar!" - Gabriela Costa / Proprietária da <a href="#" class="depoimentos__link">Gabi Sweets</a></p>
                 </blockquote>
-                <blockquote>
-                    <p>"Excelente atendimento e resultados excepcionais. Recomendo a todos!" - Gustavo Rios / Proprietário da <a href="#">Rios Contabilidade</a></p>
+                <blockquote class="depoimentos__blockquote">
+                    <p>"Excelente atendimento e resultados excepcionais. Recomendo a todos!" - Gustavo Rios / Proprietário da <a href="#" class="depoimentos__link">Rios Contabilidade</a></p>
                 </blockquote>
-                <blockquote>
-                    <p>"As vendas online aumentaram muito desde que contratamos a Criativa Web. Indicarei a todos os colegas que querem uma forte presença online!" - Aline Francisco / Proprietária da <a href="#">Lotus Boutique</a></p>
+                <blockquote class="depoimentos__blockquote">
+                    <p>"As vendas online aumentaram muito desde que contratamos a Criativa Web. Indicarei a todos os colegas que querem uma forte presença online!" - Aline Francisco / Proprietária da <a href="#" class="depoimentos__link">Lotus Boutique</a></p>
                 </blockquote>
             </div>
         </section>
-        <section id="contato">
-            <h2>Contato</h2>
+        <section id="contato" class="contato">
+            <h2 class="contato__titulo">Contato</h2>
 
-            <div class="contatoEmBlocos">
-                <div class="infoContato">
+            <div class="contato__galeria">
+                <div class="contato__informacoes">
 
-                    <h3>Endereço:</h3>
+                    <h3 class="contato__subtitulo">Endereço:</h3>
                     <p>Rua das Flores, 123 - 5º Andar, sala 533 - Galeria Primavera - Jardins, São Paulo - SP - CEP: 01234-567</p>
-                    <h3>Telefone:</h3>
+                    <h3 class="contato__subtitulo">Telefone:</h3>
                     <p>(11) 98765-4321</p>
-                    <h3>Email:</h3>
+                    <h3 class="contato__subtitulo">Email:</h3>
                     <p>comercial@criativaweb.com.br</p>
 
                 </div>
 
-                <div class="formContato">
+                <div class="contato__direto">
 
-                    <h3>Formulário de Contato</h3>
+                    <h3 class="contato__subtitulo">Formulário de Contato</h3>
 
-                    <form>
+                    <form class="contato__form">
                         <label for="nome">Nome (obrigatório):</label>
-                        <input type="text" id="nome" name="nome" required />
+                        <input type="text" id="nome" name="nome" class="contato__input" required />
                         
                         <label for="email">Email (obrigatório):</label>
-                        <input type="email" id="email" name="email" required />
+                        <input type="email" id="email" name="email" class="contato__input" required />
 
                         <label for="fone">Telefone para contato (obrigatório):</label>
-                        <input type="tel" id="fone" name="fone" required />
+                        <input type="tel" id="fone" name="fone" class="contato__input" required />
 
                         <label for="assunto">Assunto (obrigatório):</label>
-                        <select id="assunto" name="assunto" required>
-                            <option value="">Selecione um assunto</option>
-                            <option value="orcamento">Solicitar Orçamento</option>
-                            <option value="duvidas">Dúvidas sobre Serviços</option>
-                            <option value="curriculo">Envio de Currículo</option>
-                            <option value="outros">Outros</option>
+                        <select id="assunto" name="assunto" class="contato__select" required>
+                            <option value="" class="contato__option">Selecione um assunto</option>
+                            <option value="orcamento" class="contato__option">Solicitar Orçamento</option>
+                            <option value="duvidas" class="contato__option">Dúvidas sobre Serviços</option>
+                            <option value="curriculo" class="contato__option">Envio de Currículo</option>
+                            <option value="outros" class="contato__option">Outros</option>
                         </select>
                         
                         <label for="mensagem">Mensagem (obrigatório):</label>
-                        <textarea id="mensagem" name="mensagem" required></textarea>
+                        <textarea id="mensagem" name="mensagem" class="contato__textarea" required></textarea>
 
                         <label for="arquivo">Anexar arquivo (opcional):</label>
-                        <input type="file" id="arquivo" name="arquivo" />
+                        <input type="file" id="arquivo" name="arquivo" class="contato__anexar" />
                         
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="contato__button">Enviar</button>
                     </form>
 
                 </div>
