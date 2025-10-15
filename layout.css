@@ -1,0 +1,119 @@
+/* Para aplicar em todos os dispositivos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #333;
+    background-color: #4d4d4d;
+    padding: 1rem;
+}
+
+header {
+    background: #7e7e7e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    padding: 1rem;
+}
+
+section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #7e7e7e;
+    color: #fff;
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: dotted underline;
+    color: #aaf3bc;
+}
+
+a:hover {
+    text-decoration: solid underline;
+    color: #e4197f;
+}
+
+a:active {
+    text-decoration: none;
+    color: #d495ff;
+}
+
+footer {
+    margin-top: 1.5rem;
+    background: linear-gradient(360deg, #fff, #4d4d4d);
+    text-align: center;
+    color: #152719;
+    font-weight: bold;
+}
+
+/* Para telas maiores (acima de 900px - desktop) */
+@media (min-width: 901px) {
+
+    body {
+        padding: 3rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: stretch; /* Alinha os itens para preencher a altura do grid */
+    }
+
+    header {
+        grid-column: 1 / 2;
+    }
+
+    nav {
+        grid-column: 2 / 3;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* Para telas médias (entre 601px e 900px - tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .container {
+        display: block;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+
+}
+
+/* Para telas pequenas (até 600px - mobile) */
+@media (max-width: 600px) {
+
+    .container {
+        display: block;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+}
