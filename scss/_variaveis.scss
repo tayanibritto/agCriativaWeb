@@ -1,0 +1,132 @@
+@use "sass:math";
+@use "sass:string";
+
+/* Variáveis do CSS */
+// Variáveis-padrão
+
+$fonte-padrao: Arial, sans-serif;
+
+$alinhamento-padrao: center; // text-align ou justify-content
+
+$cor-padrao: white;
+
+$cor-background-padrao: #7e7e7e;
+
+$sem-estilo-padrao: none; // usar para list-style ou text-decoration
+
+$sem-cor-padrao: transparent;
+
+$grossura-fonte-padrao: bold;
+
+$largura-padrao: 100%; // Usar para width
+$largura-menor: calc($largura-padrao - 50%); // 50%
+
+$estilo-borda-padrao: dotted;
+$cor-borda-padrao: #757575;
+
+$altura-tela-padrao: 80vh;
+$altura-tela-menor: calc($altura-tela-padrao - 30vh); // 50vh
+$altura-tela-maior: calc($altura-tela-padrao + 10vh); // 90vh
+$altura-automatica: auto;
+
+$altura-linha-padrao: 1.5; // Usar para line-height
+$altura-linha-maior-05: calc($altura-linha-padrao + 0.5); // 2
+$altura-linha-maior-15: calc($altura-linha-padrao + 1.5); // 3
+$altura-linha-maior-25: calc($altura-linha-padrao + 2.5); // 4
+$altura-linha-maior-35: calc($altura-linha-padrao + 3.5); // 5
+
+$background-button-padrao: #54795d;
+$background-button-hover: #bd7ea5;
+$cor-fonte-button-hover: #3f3f3f;
+$background-button-ativo: #52414b;
+$cor-fonte-button-ativo: #c0c0c0;
+
+$display-flex-padrao: flex;
+$flex-direction-padrao: column;
+$display-wrap-padrao: wrap;
+$display-grid-padrao: grid;
+$display-bloqueio-padrao: block;
+
+$cor-link-padrao: #aaf3bc;
+$cor-link-hover-padrao: #e4197f;
+$cor-link-ativo-padrao: #d495ff;
+$decoracao-link-padrao: dotted underline;
+$decoracao-link-hover-padrao: solid underline;
+
+$tamanho-padrao: 1rem; // Usar para tamanho de fonte, padding, margem ou gap
+$tamanho-menor-02: calc($tamanho-padrao - 0.2rem); // 0.8rem
+$tamanho-maior-02: calc($tamanho-padrao + 0.2rem); // 1.2rem
+$tamanho-maior-03: calc($tamanho-padrao + 0.3rem); // 1.3rem
+$tamanho-maior-04: calc($tamanho-padrao + 0.4rem); // 1.4rem
+$tamanho-maior-05: calc($tamanho-padrao + 0.5rem); // 1.5rem
+$tamanho-duplicado: calc($tamanho-padrao * 2); // 2rem
+$tamanho-triplicado: calc($tamanho-padrao * 3); // 3rem
+$tamanho-quadruplicado: calc($tamanho-padrao * 4); //4rem
+$tamanho-quintuplicado: calc($tamanho-padrao * 5); // 5rem
+
+// Variáveis do body
+
+$cor-background-body: #4d4d4d;
+$cor-fonte-body: #333;
+
+// Variáveis do nav e elementos
+
+$cor-background-nav: #6b6b6b;
+$cor-link-menu: #ff50bc;
+$cor-link-menu-hover: #ffcfe3;
+$cor-link-menu-ativo: #adbd24;
+$flex-direction-menu: row;
+
+// Variáveis dos sections
+
+    // Variáveis do section TOPO
+    $background-topo: url('../img/fundo_home.png');
+    $cor-titulo-topo: #ff68c5;
+
+    // Variáveis do section SOBRE
+    $cor-background-sobre: rgba(0, 0, 0, 0.5);
+    $cor-titulo-sobre: #9f98ff;
+
+    // Variáveis do section SERVIÇOS
+    $background-servicos: url('../img/fundo_servicos.png');
+    $cor-titulo-servicos: #e1ff90;
+    $colunas-grid-servicos: repeat(auto-fit, minmax(200px, 1fr));
+
+    // Variáveis do section DEPOIMENTOS
+    $background-depoimentos: #5a5a5a;
+    $cor-titulo-depoimentos: #b4acff;
+    $colunas-grid-depoimentos: repeat(auto-fit, minmax(250px, 1fr));
+    $alinhamento-depoimentos: stretch;
+    $estilo-fonte-depoimentos: italic;
+    $estilo-borda-depoimentos: ridge;
+    $cor-borda-depoimentos: #838383;
+    $cor-background-blockquote: #435750;
+    $background-depoimentos-blockquote: url('../img/fundo_block_depoimentos.png');
+    $repeticao-img-blockquote: no-repeat;
+    $sobreposicao-img-blockquote: overlay;
+    $cor-link-depoimentos-hover: #000;
+
+    // Variáveis do section CONTATO
+    $background-contato: url('../img/fundo_contato.png');
+    $cor-titulo-contato: #c2ffe0;
+    $cor-subtitulo-contato: #ffa1eb;
+
+// Variáveis do footer
+
+$cor-background-footer: linear-gradient(360deg, $cor-padrao, $cor-background-body);
+$cor-fonte-footer: #152719;
+
+// Responsividade - variáveis para telas maiores (acima de 900px - desktop)
+$colunas-tela-maior: 1fr 2fr;
+$alinhamento-itens-tela-maior: stretch;
+$colunas-grid-header: string.unquote("1 / 2");
+$colunas-grid-nav: string.unquote("2 / 3");
+$colunas-grid-contato: 1fr 1fr;
+$alinhamento-contato: start;
+$tamanho-zerado: 0;
+
+
+
+
+
+

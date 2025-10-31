@@ -1,0 +1,278 @@
+@use 'variaveis';
+@use 'componentes';
+@use 'mixins';
+
+/* Estrutura da página por elemento, responsividade específica */
+
+.nav {
+    background: variaveis.$cor-background-nav;
+
+    &__menu {
+        @extend .menu;
+    }
+
+    &__link {
+        @extend .menu__link;
+    }
+
+    &__link:hover {
+        @extend .menu__link--hover;
+    }
+
+    &__link:active {
+        @extend .menu__link--active;
+    }
+}
+
+.topo {
+    text-align: variaveis.$alinhamento-padrao;
+    min-height: variaveis.$altura-tela-padrao;
+    display: variaveis.$display-flex-padrao;
+    flex-direction: variaveis.$flex-direction-padrao;
+    justify-content: variaveis.$alinhamento-padrao;
+    background-image: variaveis.$background-topo;
+    @include mixins.estilo-section-imagem;
+
+    &__titulo {
+        color: variaveis.$cor-titulo-topo;
+    }
+}
+
+.sobre {
+    text-align: variaveis.$alinhamento-padrao;
+    min-height: variaveis.$altura-tela-menor;
+    display: variaveis.$display-flex-padrao;
+    flex-direction: variaveis.$flex-direction-padrao;
+    justify-content: variaveis.$alinhamento-padrao;
+    background-color: variaveis.$cor-background-sobre;
+
+    &__titulo {
+        color: variaveis.$cor-titulo-sobre;
+    }
+}
+
+.servicos {
+    text-align: variaveis.$alinhamento-padrao;
+    min-height: variaveis.$altura-tela-maior;
+    display: variaveis.$display-flex-padrao;
+    flex-direction: variaveis.$flex-direction-padrao;
+    justify-content: variaveis.$alinhamento-padrao;
+    background-image: variaveis.$background-servicos;
+    @include mixins.estilo-section-imagem;
+
+    &__titulo {
+        color: variaveis.$cor-titulo-servicos;
+    }
+
+    &__list {
+        list-style: variaveis.$sem-estilo-padrao;
+        display: variaveis.$display-grid-padrao;
+        grid-template-columns: variaveis.$colunas-grid-servicos;
+        gap: variaveis.$tamanho-maior-05;
+        padding: variaveis.$tamanho-padrao;
+        width: variaveis.$largura-padrao;
+    }
+
+    &__item {
+        padding: variaveis.$tamanho-padrao;
+        @include mixins.borda-arredondada-padrao;
+        border-style: variaveis.$estilo-borda-padrao;
+        border-color: variaveis.$cor-borda-padrao;
+        text-align: variaveis.$alinhamento-padrao;
+        font-weight: variaveis.$grossura-fonte-padrao;
+    }
+}
+
+.depoimentos {
+    text-align: variaveis.$alinhamento-padrao;
+    height: variaveis.$altura-automatica;
+    padding: variaveis.$tamanho-duplicado;
+    background-color: variaveis.$background-depoimentos;
+
+    &__titulo {
+        color: variaveis.$cor-titulo-depoimentos;
+    }
+
+    &__galeria {
+        display: variaveis.$display-grid-padrao;
+        grid-template-columns: variaveis.$colunas-grid-depoimentos;
+        gap: variaveis.$tamanho-duplicado;
+        margin-top: variaveis.$tamanho-duplicado;
+        align-items: variaveis.$alinhamento-depoimentos;
+    }
+
+    &__blockquote {
+        @extend .blockquote;
+    }
+
+    &__link:hover {
+        color: variaveis.$cor-link-depoimentos-hover;
+    }
+}
+
+.contato {
+    background-image: variaveis.$background-contato;
+    @include mixins.estilo-section-imagem;
+
+    &__titulo {
+        color: variaveis.$cor-titulo-contato;
+    }
+
+    &__galeria {
+        display: variaveis.$display-bloqueio-padrao;
+        gap: variaveis.$tamanho-duplicado;
+        margin-top: variaveis.$tamanho-duplicado;
+    }
+
+    &__subtitulo {
+        color: variaveis.$cor-subtitulo-contato;
+    }
+
+    &__informacoes, &__direto {
+        margin-bottom: variaveis.$tamanho-duplicado;
+        line-height: variaveis.$altura-linha-maior-05;
+    }
+
+    &__form {
+        @extend .formulario;
+    }
+
+    &__input, &__textarea, &__select {
+        @include mixins.campos-formulario;
+    }
+
+    &__input, &__select, &__button {
+        @extend .formulario-campos-medios;
+    }
+
+    &__option {
+        @extend .formulario-campos-pequenos;
+    }
+
+    &__textarea {
+        @extend .formulario-campos-grandes;
+    }
+
+    &__button {
+        @extend .botao;
+    }
+
+    &__button:hover {
+        @extend .botao--hover;
+    }
+
+    &__button:active {
+        @extend .botao--active;
+    }
+
+    &__anexar {
+        @extend .formulario-campo-anexar;
+    }
+
+}
+
+/* Estilos para telas maiores (acima de 900px - desktop) */
+@media (min-width: 901px) {
+
+    .nav__menu {
+        gap: variaveis.$tamanho-quadruplicado;
+        font-size: variaveis.$tamanho-maior-03;
+    }
+
+    .topo {
+        font-size: variaveis.$tamanho-maior-05;
+        line-height: variaveis.$altura-linha-maior-35;
+    }
+
+    .sobre {
+        font-size: variaveis.$tamanho-maior-03;
+        line-height: variaveis.$altura-linha-maior-15;
+    }
+
+    .servicos {
+        font-size: variaveis.$tamanho-maior-03;
+        line-height: variaveis.$altura-linha-maior-25;
+    }
+
+    .depoimentos {
+        font-size: variaveis.$tamanho-maior-03;
+        line-height: variaveis.$altura-linha-maior-05;
+    }
+
+    .contato {
+        font-size: variaveis.$tamanho-maior-03;
+
+        &__galeria {
+            display: variaveis.$display-grid-padrao;
+            grid-template-columns: variaveis.$colunas-grid-contato;
+            align-items: variaveis.$alinhamento-contato;
+        }
+
+        &__informacoes, &__direto {
+            margin-bottom: variaveis.$tamanho-zerado;
+        }
+
+        &__input, &__select, &__anexar {
+            font-size: variaveis.$tamanho-maior-03;
+        }
+    }
+}
+
+/* Estilos para telas médias (entre 601px e 900px - tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .nav__menu {
+        gap: variaveis.$tamanho-duplicado;
+        font-size: variaveis.$tamanho-maior-02;
+    }
+
+    .topo {
+        font-size: variaveis.$tamanho-maior-03;
+        line-height: variaveis.$altura-linha-maior-25;
+    }
+
+    .sobre, .servicos {
+        font-size: variaveis.$tamanho-maior-03;
+        line-height: variaveis.$altura-linha-maior-15;
+    }
+
+    .depoimentos {
+        font-size: variaveis.$tamanho-maior-03;
+        line-height: variaveis.$altura-linha-maior-05;
+    }
+
+    .contato, .contato__input, .contato__select, .contato__anexar, .contato__button {
+        font-size: variaveis.$tamanho-maior-03;
+
+    }
+
+}
+
+/* Estilos para telas pequenas (até 600px - mobile) */
+@media (max-width: 600px) {
+
+    .nav__menu {
+        gap: variaveis.$tamanho-padrao;
+        font-size: variaveis.$tamanho-menor-02;
+    }
+
+    .topo {
+        font-size: variaveis.$tamanho-padrao;
+        line-height: variaveis.$altura-linha-maior-15;
+    }
+
+    .sobre {
+        font-size: variaveis.$tamanho-menor-02;
+        line-height: variaveis.$altura-linha-maior-15;
+    }
+
+    .servicos, .depoimentos {
+        font-size: variaveis.$tamanho-padrao;
+        line-height: variaveis.$altura-linha-maior-05;
+    }
+
+    .contato {
+        font-size: variaveis.$tamanho-padrao;
+    }
+
+}

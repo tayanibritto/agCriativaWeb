@@ -1,0 +1,125 @@
+
+@use 'variaveis';
+@use 'mixins';
+
+/* Estrutura-base da página - Topologia, CSS Reset, CSS Grid, elementos do body, responsividade geral */
+
+/* Para aplicar em todos os dispositivos */
+
+* {
+    margin: variaveis.$tamanho-zerado;
+    padding: variaveis.$tamanho-zerado;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: variaveis.$fonte-padrao;
+    line-height: variaveis.$altura-linha-padrao;
+    font-size: variaveis.$tamanho-padrao;
+    color: variaveis.$cor-fonte-body;
+    background-color: variaveis.$cor-background-body;
+    padding: variaveis.$tamanho-padrao;
+}
+
+header {
+    background: variaveis.$cor-background-padrao;
+    color: variaveis.$cor-padrao;
+    text-align: variaveis.$alinhamento-padrao;
+    padding: variaveis.$tamanho-padrao;
+}
+
+nav {
+    padding: variaveis.$tamanho-padrao;
+}
+
+section {
+    margin-top: variaveis.$tamanho-duplicado;
+    padding: variaveis.$tamanho-padrao;
+    background: variaveis.$cor-background-padrao;
+    color: variaveis.$cor-padrao;
+    @include mixins.borda-arredondada-padrao;
+}
+
+a {
+    text-decoration: variaveis.$decoracao-link-padrao;
+    color: variaveis.$cor-link-padrao;
+}
+
+a:hover {
+    text-decoration: variaveis.$decoracao-link-hover-padrao;
+    color: variaveis.$cor-link-hover-padrao;
+}
+
+a:active {
+    text-decoration: variaveis.$sem-estilo-padrao;
+    color: variaveis.$cor-link-ativo-padrao;
+}
+
+footer {
+    margin-top: variaveis.$tamanho-maior-05;
+    background: variaveis.$cor-background-footer;
+    text-align: variaveis.$alinhamento-padrao;
+    color: variaveis.$cor-fonte-footer;
+    font-weight: variaveis.$grossura-fonte-padrao;
+}
+
+/* Para telas maiores (acima de 900px - desktop) */
+@media (min-width: 901px) {
+
+    body {
+        padding: variaveis.$tamanho-triplicado;
+    }
+
+    .container {
+        display: variaveis.$display-grid-padrao;
+        grid-template-columns: variaveis.$colunas-tela-maior;
+        align-items: variaveis.$alinhamento-itens-tela-maior; /* Alinha os itens para preencher a altura do grid */
+    }
+
+    header {
+        grid-column: variaveis.$colunas-grid-header;
+    }
+
+    nav {
+        grid-column: variaveis.$colunas-grid-nav;
+    }
+
+    footer {
+        font-size: variaveis.$tamanho-maior-04;
+    }
+
+}
+
+/* Para telas médias (entre 601px e 900px - tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .container {
+        display: variaveis.$display-bloqueio-padrao;
+    }
+
+    nav {
+        margin-top: variaveis.$tamanho-padrao;
+    }
+
+    footer {
+        font-size: variaveis.$tamanho-maior-02;
+    }
+
+}
+
+/* Para telas pequenas (até 600px - mobile) */
+@media (max-width: 600px) {
+
+    .container {
+        display: variaveis.$display-bloqueio-padrao;
+    }
+
+    nav {
+        margin-top: variaveis.$tamanho-padrao;
+    }
+
+    footer {
+        font-size: variaveis.$tamanho-menor-02;
+    }
+
+}

@@ -1,0 +1,384 @@
+@charset "UTF-8";
+/* Variáveis do CSS */
+/* Estruturas que se repetem na página */
+/* Estrutura-base da página - Topologia, CSS Reset, CSS Grid, elementos do body, responsividade geral */
+/* Para aplicar em todos os dispositivos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #333;
+  background-color: #4d4d4d;
+  padding: 1rem;
+}
+
+header {
+  background: #7e7e7e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  padding: 1rem;
+}
+
+section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #7e7e7e;
+  color: white;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: dotted underline;
+  color: #aaf3bc;
+}
+
+a:hover {
+  text-decoration: solid underline;
+  color: #e4197f;
+}
+
+a:active {
+  text-decoration: none;
+  color: #d495ff;
+}
+
+footer {
+  margin-top: 1.5rem;
+  background: linear-gradient(360deg, white, #4d4d4d);
+  text-align: center;
+  color: #152719;
+  font-weight: bold;
+}
+
+/* Para telas maiores (acima de 900px - desktop) */
+@media (min-width: 901px) {
+  body {
+    padding: 3rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: stretch; /* Alinha os itens para preencher a altura do grid */
+  }
+  header {
+    grid-column: 1 / 2;
+  }
+  nav {
+    grid-column: 2 / 3;
+  }
+  footer {
+    font-size: 1.4rem;
+  }
+}
+/* Para telas médias (entre 601px e 900px - tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    display: block;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  footer {
+    font-size: 1.2rem;
+  }
+}
+/* Para telas pequenas (até 600px - mobile) */
+@media (max-width: 600px) {
+  .container {
+    display: block;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}
+/* Componentes da página - Menu, botão, etc */
+.menu, .nav__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+  gap: 1rem; /* Espaçamento entre os itens do menu */
+}
+
+.menu__link, .nav__link {
+  text-decoration: none;
+  color: #ff50bc;
+  font-weight: bold;
+}
+
+.menu__link--hover, .nav__link:hover {
+  color: #ffcfe3;
+}
+
+.menu__link--active, .nav__link:active {
+  color: #adbd24;
+}
+
+.blockquote, .depoimentos__blockquote {
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-style: italic;
+  font-weight: bold;
+  border-style: ridge;
+  border-color: #838383;
+  background-color: #435750;
+  background-image: url("../img/fundo_block_depoimentos.png");
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+.formulario, .contato__form {
+  display: grid;
+  max-width: 50%;
+  gap: 1rem;
+}
+
+.formulario-campos-pequenos, .contato__option {
+  height: 1rem;
+}
+
+.formulario-campos-medios, .contato__input, .contato__select, .contato__button {
+  height: 2rem;
+}
+
+.formulario-campos-grandes, .contato__textarea {
+  height: 5rem;
+}
+
+.formulario-campo-anexar, .contato__anexar {
+  border-style: none;
+  background-color: transparent;
+  color: white;
+  height: auto;
+}
+
+.botao, .contato__button {
+  border-radius: 5px;
+  border-style: none;
+  background-color: #54795d;
+  color: white;
+}
+
+.botao--hover, .contato__button:hover {
+  background-color: #bd7ea5;
+  color: #3f3f3f;
+}
+
+.botao--active, .contato__button:active {
+  background-color: #52414b;
+  color: #c0c0c0;
+}
+
+/* Estrutura da página por elemento, responsividade específica */
+.nav {
+  background: #6b6b6b;
+}
+.topo {
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../img/fundo_home.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay; /* Adiciona um efeito de sobreposição */
+}
+.topo__titulo {
+  color: #ff68c5;
+}
+
+.sobre {
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.sobre__titulo {
+  color: #9f98ff;
+}
+
+.servicos {
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../img/fundo_servicos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay; /* Adiciona um efeito de sobreposição */
+}
+.servicos__titulo {
+  color: #e1ff90;
+}
+.servicos__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+.servicos__item {
+  padding: 1rem;
+  border-radius: 8px;
+  border-style: dotted;
+  border-color: #757575;
+  text-align: center;
+  font-weight: bold;
+}
+
+.depoimentos {
+  text-align: center;
+  height: auto;
+  padding: 2rem;
+  background-color: #5a5a5a;
+}
+.depoimentos__titulo {
+  color: #b4acff;
+}
+.depoimentos__galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+.depoimentos__link:hover {
+  color: #000;
+}
+
+.contato {
+  background-image: url("../img/fundo_contato.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay; /* Adiciona um efeito de sobreposição */
+}
+.contato__titulo {
+  color: #c2ffe0;
+}
+.contato__galeria {
+  display: block;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.contato__subtitulo {
+  color: #ffa1eb;
+}
+.contato__informacoes, .contato__direto {
+  margin-bottom: 2rem;
+  line-height: 2;
+}
+.contato__input, .contato__textarea, .contato__select {
+  border-radius: 5px;
+  border-style: dotted;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+/* Estilos para telas maiores (acima de 900px - desktop) */
+@media (min-width: 901px) {
+  .nav__menu {
+    gap: 4rem;
+    font-size: 1.3rem;
+  }
+  .topo {
+    font-size: 1.5rem;
+    line-height: 5;
+  }
+  .sobre {
+    font-size: 1.3rem;
+    line-height: 3;
+  }
+  .servicos {
+    font-size: 1.3rem;
+    line-height: 4;
+  }
+  .depoimentos {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+  .contato {
+    font-size: 1.3rem;
+  }
+  .contato__galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .contato__informacoes, .contato__direto {
+    margin-bottom: 0;
+  }
+  .contato__input, .contato__select, .contato__anexar {
+    font-size: 1.3rem;
+  }
+}
+/* Estilos para telas médias (entre 601px e 900px - tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .nav__menu {
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+  .topo {
+    font-size: 1.3rem;
+    line-height: 4;
+  }
+  .sobre, .servicos {
+    font-size: 1.3rem;
+    line-height: 3;
+  }
+  .depoimentos {
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+  .contato, .contato__input, .contato__select, .contato__anexar, .contato__button {
+    font-size: 1.3rem;
+  }
+}
+/* Estilos para telas pequenas (até 600px - mobile) */
+@media (max-width: 600px) {
+  .nav__menu {
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+  .topo {
+    font-size: 1rem;
+    line-height: 3;
+  }
+  .sobre {
+    font-size: 0.8rem;
+    line-height: 3;
+  }
+  .servicos, .depoimentos {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  .contato {
+    font-size: 1rem;
+  }
+}
+/* SASS gerador do CSS */
+
+/*# sourceMappingURL=estilos.css.map */

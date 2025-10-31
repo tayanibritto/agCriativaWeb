@@ -1,0 +1,26 @@
+@use 'variaveis';
+
+/* Estruturas que se repetem na página */
+
+@mixin borda-arredondada-padrao {
+    border-radius: 8px;
+}
+
+@mixin borda-arredondada-menor {
+    border-radius: 5px;
+}
+
+@mixin estilo-section-imagem {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay; /* Adiciona um efeito de sobreposição */
+}
+
+@mixin campos-formulario {
+    @include borda-arredondada-menor();
+    border-style: dotted;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+}
