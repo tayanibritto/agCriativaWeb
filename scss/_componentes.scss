@@ -1,0 +1,82 @@
+@use 'variaveis';
+@use 'mixins';
+
+/* Componentes da página - Menu, botão, etc */
+
+.menu {
+    list-style: variaveis.$sem-estilo-padrao;
+    display: variaveis.$display-flex-padrao;
+    flex-direction: variaveis.$flex-direction-menu;
+    justify-content: variaveis.$alinhamento-padrao;
+    flex-wrap: variaveis.$display-wrap-padrao; /* Permite que os itens quebrem para a próxima linha se necessário */
+    gap: variaveis.$tamanho-padrao; /* Espaçamento entre os itens do menu */
+}
+
+.menu__link {
+    text-decoration: variaveis.$sem-estilo-padrao;
+    color: variaveis.$cor-link-menu;
+    font-weight: variaveis.$grossura-fonte-padrao;
+}
+
+.menu__link--hover {
+    color: variaveis.$cor-link-menu-hover;
+}
+
+.menu__link--active {
+    color: variaveis.$cor-link-menu-ativo;
+}
+
+.blockquote {
+    padding: variaveis.$tamanho-maior-05;
+    @include mixins.borda-arredondada-padrao;
+    font-style: variaveis.$estilo-fonte-depoimentos;
+    font-weight: variaveis.$grossura-fonte-padrao;
+    border-style: variaveis.$estilo-borda-depoimentos;
+    border-color: variaveis.$cor-borda-depoimentos;
+    background-color: variaveis.$cor-background-blockquote;
+    background-image: variaveis.$background-depoimentos-blockquote;
+    background-repeat: variaveis.$repeticao-img-blockquote;
+    background-blend-mode: variaveis.$sobreposicao-img-blockquote;
+}
+
+.formulario {
+    display: variaveis.$display-grid-padrao;
+    max-width: variaveis.$largura-menor;
+    gap: variaveis.$tamanho-padrao;
+}
+
+.formulario-campos-pequenos {
+    height: variaveis.$tamanho-padrao;
+}
+
+.formulario-campos-medios {
+    height: variaveis.$tamanho-duplicado;
+}
+
+.formulario-campos-grandes {
+    height: variaveis.$tamanho-quintuplicado;
+}
+
+.formulario-campo-anexar {
+    border-style: variaveis.$sem-estilo-padrao;
+    background-color: variaveis.$sem-cor-padrao;
+    color: variaveis.$cor-padrao;
+    height: variaveis.$altura-automatica;
+}
+
+.botao {
+    @include mixins.borda-arredondada-menor;
+    border-style: variaveis.$sem-estilo-padrao;
+    background-color: variaveis.$background-button-padrao;
+    color: variaveis.$cor-padrao;
+}
+
+.botao--hover {
+    background-color: variaveis.$background-button-hover;
+    color: variaveis.$cor-fonte-button-hover;
+}
+
+.botao--active {
+    background-color: variaveis.$background-button-ativo;
+    color: variaveis.$cor-fonte-button-ativo;
+}
