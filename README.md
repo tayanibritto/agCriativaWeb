@@ -4,11 +4,11 @@ Descrição: Página web de uma agência de design digital fictícia chamada "Ag
 
 Tecnologias utilizadas: HTML5, SASS/SCSS
 
-Pré-requisitos: Navegador atualizado (projeto foi testado e funciona no Google Chrome Versão 142.0.7444.163 64 bits - Caso utilize este navegador, recomenda-se tal versão ou superior). Node.js instalado (necessário para rodar o compilador SASS). Gerenciador de pacotes (npm ou yarn).
+Pré-requisitos: Navegador atualizado (projeto foi testado e funciona no Google Chrome Versão 142.0.7444.163 64 bits - Caso utilize este navegador, recomenda-se tal versão ou superior).
 
 Instalação:
 
-Passos para clonar e rodar: git clone https://github.com/tayanibritto/agCriativaWeb.git / cd agCriativaWeb / npm install / npm run sass (ou npm run build, dependendo do script configurado) / abrir index.html no navegador
+Passos para clonar e rodar: git clone https://github.com/tayanibritto/agCriativaWeb.git / cd agCriativaWeb / abrir index.html no navegador
 Como usar: Para testar a responsividade da página, você pode utilizar o DevTools do Navegador e escolher os vários tipos de dispositivos.
 Estrutura do Projeto: 
   - css/
@@ -34,5 +34,5 @@ Estrutura do Projeto:
     - estilos.scss
   - index.html
 
-Observações: A estrutura do layout responsivo funciona 100%, porém a configuração JavaScript (ou a linguagem que preferir) do formulário de contato precisarão da configuração do desenvolvedor. As informações personalizadas (como imagens, depoimentos e dados da empresa) também precisarão de alteração.
+Observações: A estrutura do layout responsivo funciona 100%, porém a configuração JavaScript (ou a linguagem que preferir) do formulário de contato precisarão da configuração do desenvolvedor. As informações personalizadas (como imagens, depoimentos e dados da empresa) também precisarão de alteração. Este projeto utiliza SASS/SCSS para estilização, mas os arquivos CSS já estão compilados. Não é necessário instalar dependências ou compilar SCSS para executar.
 
